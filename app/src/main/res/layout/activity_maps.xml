@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <fragment
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9.3"
+        tools:context=".MapsActivity" >
+    </fragment>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Point"
+            android:id="@+id/point_button"
+            android:background="@color/base_button"
+            android:backgroundTint="@color/base_button"
+            android:onClick="OnClickPointButton"/>
+
+        <Button
+            android:id="@+id/line_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/base_button"
+            android:backgroundTint="@color/base_button"
+            android:text="Line"
+            android:onClick="OnClickLineButton"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Plane"
+            android:id="@+id/plane_button"
+            android:background="@color/base_button"
+            android:backgroundTint="@color/base_button"
+            android:onClick="OnClickPlaneButton"/>
+    </LinearLayout>
+
+</LinearLayout>
