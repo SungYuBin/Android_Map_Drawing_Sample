@@ -5,16 +5,34 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <fragment
-        xmlns:map="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="9.3"
-        tools:context=".MapsActivity" >
-    </fragment>
+        android:layout_weight="9.3">
+
+        <fragment
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            tools:context=".MapsActivity">
+        </fragment>
+
+        <TextView
+            android:id="@+id/gpsvaluetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:background="@color/white"
+            android:textColor="@color/black"/>
+    </FrameLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,5 +70,7 @@
             android:backgroundTint="@color/base_button"
             android:onClick="OnClickPlaneButton"/>
     </LinearLayout>
+
+
 
 </LinearLayout>
