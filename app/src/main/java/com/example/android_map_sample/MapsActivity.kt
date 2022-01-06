@@ -153,7 +153,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMapCli
     fun onLocationChanged(location: Location) {
         Log.d(TAG, "onLocationChanged()")
         mLastLocation = location
-
+        location.speed;
         gpsvaluetext.setText(location.latitude.toString())
 //        val date: Date = Calendar.getInstance().time
 //        val simpleDateFormat = SimpleDateFormat("hh:mm:ss a")
